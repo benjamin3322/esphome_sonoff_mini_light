@@ -1,0 +1,16 @@
+# Define commons wifi configuration. See: https://esphome.io/components/wifi.html for more details
+
+wifi:
+  ssid: ${wifi_ssid}
+  password: ${wifi_password}
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: ${device_name}_fallback
+    password: ${wifi_ap_password}
+
+# Enable captive portal. See: https://esphome.io/components/captive_portal.html
+# When wifi connection fails, the ESPHome device will start to diffuse a Wifi HotSpot 
+# (with the credentials from the wifi -> ${wifi_ap_password).
+# When connected to the hotspot got to: http://192.168.4.1/
+captive_portal:

@@ -1,0 +1,20 @@
+# This file define common esp8266 configuration for sonoff devices
+
+# Define commons esphome configuration. See: https://esphome.io/components/esphome.html
+esphome:
+  name: ${device_name}
+  platform: ESP8266
+  board: esp01_1m
+
+# Enable logging. See: https://esphome.io/components/logger.html
+logger:
+
+# Enable Home Assistant API. See: https://esphome.io/components/api.html
+api:
+  # Note: The API password is useless with encryption on (not used anymore)
+  encryption:
+    key: ${api_encryption_key}
+
+# Enable Over the air update. See: https://esphome.io/components/ota.html
+ota:
+  password: ${ota_password}
