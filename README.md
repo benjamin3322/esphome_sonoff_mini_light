@@ -39,7 +39,9 @@ packages:
       commons/esphome_8266.yaml, 
       
       # This mode configure the S1/S2 input lines into push button mode (push toggle the light on or off)
-      # To use a regulat switch mode use the file named commons/sonoff_mini_light_switch_mode.yaml (toggle the light on/off by switching a button up/down)
+      # To use a regular switch mode use the file named commons/sonoff_mini_light_switch_mode.yaml (toggle the light on/off by switching a button up/down)
+      # You can comment the following line to "save" space for the first firmware build. (The OTA update will work for .bin file < 500)
+      # One the first OTA update is sucessful, uncomment the lite and update again
       commons/sonoff_mini_light_push_mode.yaml
     ]
     refresh: 1d # optional
