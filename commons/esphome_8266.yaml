@@ -20,4 +20,5 @@ api:
 
 # Enable Over the air update. See: https://esphome.io/components/ota.html
 ota:
+  platform: esphome
   password: ${ota_password}
